@@ -9,6 +9,12 @@ function Builder.new(palette, opts)
   self.o = opts
   self.groups = {}
   self._ansi = palette.terminal
+
+  self.git = palette.git or {
+    add = palette.green,
+    change = palette.orange,
+    delete = palette.red,
+  }
   return self
 end
 

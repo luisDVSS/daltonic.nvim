@@ -39,14 +39,14 @@ return {
   -- Diff: azul = añadido, ámbar = borrado (distinguibles sin rojo/verde)
   diff_add = "#1B3A4B",
   diff_del = "#4A3A12",
-  diff_change = "#303B58",
+  diff_change = "#33302F",
 
   statusline_bg = "#202735",
   statusline_fg = "#D8DEE9",
 
   linenr = "#7A879B",
   linenr_active = "#DDCC80",
-
+  git = { add = "#93BAF4", change = "#DDCC80", delete = "#DEA2CA" }, -- protanomalia
   -- ANSI 0-15 para :terminal
   terminal = {
     "#252B36", -- 0  Black

@@ -3,7 +3,7 @@ local Builder = require("daltonic-nvim-theme.builder")
 
 local M = {}
 
---- El orden importa: `cmp` define los grupos que `blink` reutiliza.
+--- El orden importa: `cmp` define los grupos que `los grupos de blink.cmp estan en cmp.lua` reutiliza.
 M.integrations = {
   "treesitter",
   "lsp",

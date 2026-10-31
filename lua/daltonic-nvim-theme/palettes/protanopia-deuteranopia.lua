@@ -38,7 +38,7 @@ return {
   -- Diff: azul = añadido, ámbar = borrado (distinguibles sin rojo/verde)
   diff_add = "#1B3A4B",
   diff_del = "#4A3A12",
-  diff_change = "#303B58",
+  diff_change = "#33302F",
 
   statusline_bg = "#202735",
   statusline_fg = "#D8DEE9",
@@ -46,6 +46,7 @@ return {
   linenr = "#7A879B",
   linenr_active = "#E3D86E",
 
+  git = { add = "#A1B2EA", change = "#E3D86E", delete = "#D48EB9" }, -- protanopia-deuteranopia
   -- ANSI 0-15 para :terminal
   terminal = {
     "#252B36", -- 0  Black

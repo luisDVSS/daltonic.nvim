@@ -15,12 +15,20 @@ function M.setup(b)
     Ok = p.green,
   }
 
+  local underline = {
+    Error = { undercurl = true },
+    Warn = { underdashed = true },
+    Info = { underdotted = true },
+    Hint = { underdotted = true },
+    Ok = { underline = true },
+  }
+
   for kind, color in pairs(diagnostics) do
     hl("Diagnostic" .. kind, { fg = color })
     hl("DiagnosticSign" .. kind, { fg = color })
     hl("DiagnosticVirtualText" .. kind, { fg = color, bg = b:blend(color, 0.12) })
     hl("DiagnosticFloating" .. kind, { fg = color, bg = p.bg_float })
-    hl("DiagnosticUnderline" .. kind, { sp = color, undercurl = true })
+    hl("DiagnosticUnderline" .. kind, vim.tbl_extend("force", { sp = color }, underline[kind] or { undercurl = true }))
   end
 
   hl("DiagnosticDeprecated", { fg = p.fg_muted, strikethrough = true })
